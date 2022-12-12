@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form method="get" action="/result">
+      <label>タイトル</label>
+      <input type="text" name="title" /><br />
+      <label>詳細</label>
+      <textarea name="detail"></textarea><br />
+      <button type="submit">送信</button>
+    </form>
+    <section>
+      <% for (let row of data){ %>
+        <p>タイトル：<%- row[0] %></p>
+        <p>詳細：<%- row[1] %></p>
+      <% } %>
+    </section>
+  </body>
+</html>
